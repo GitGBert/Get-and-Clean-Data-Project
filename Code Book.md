@@ -40,3 +40,63 @@ The following files are available for the train and test data. Their description
 - 'train/Inertial Signals/body_acc_x_train.txt': The body acceleration signal obtained by subtracting the gravity from the total acceleration. 
 
 - 'train/Inertial Signals/body_gyro_x_train.txt': The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second. 
+
+## 1. Merging files
+
+The following files are merged into one data set called "allData"
+
+'train/X_train.txt': Training set.
+
+'train/y_train.txt': Training labels.
+
+'train/subject_test.txt  : subjected being tested
+
+'test/X_test.txt': Test set.
+
+'test/y_test.txt': Test labels.
+
+'test/subject_test.txt : Test subjects
+
+## 2. Extracts only the measurements on the mean and standard deviation for each measurement
+
+From the "allData" object, the measurement data for the variables wich contain mean or standard deviation are subset.
+alonog with the Subject and Activity name.
+
+The "features.txt" file ise used to identify the feature with mean or standard deviation, using "grep" function
+and the psotion index of those are stored in "postionMS".
+
+"positonMS" object is used to subset the variables, along with subject and Activity into the "meanstd" object.
+This products 10299 objects with 81 variables.
+
+## 3. Uses descriptive activity names to name the activities in the data set
+
+The file "activity_labels.txt" is used to extract the activity names and store in object "activityNames".
+and are showm below.
+> head(activityNames)
+     y         Activities
+ 1:  1            WALKING
+ 2:  2   WALKING_UPSTAIRS
+ 3:  3 WALKING_DOWNSTAIRS
+ 4:  4            SITTING
+ 5:  5           STANDING
+ 6:  6             LAYING
+
+Thea activity names are then merged with the main data "meanstd" back into meansstd object.
+
+## 4. Appropriately labels the data set with descriptive variable names.
+
+Feature names are taken from the "fData" object (column V2) and are stored in an object "FeatMS"
+
+Feature names are added to the "meanstd" object containing the main data.
+
+## 5. Create a second, independent tidy data set with the average of each variable for each activity and each subject
+
+"meanstd" is melted indicating IDs and Measurement Variables into 'dMelt'.
+
+'dMelt' is dcast into 'tData" object, for a final tidy dataset.
+
+"tData" is writtne to a text file in the working folder.
+
+/end
+
+
