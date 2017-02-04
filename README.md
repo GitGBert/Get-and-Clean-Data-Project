@@ -15,8 +15,8 @@ DATA DOWNLOAD
    "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
    It then unzips the file in the working directory. Subfolders are created.
    
-The dataset includes the following files:
-=========================================
+## The dataset includes the following files:
+
 
 - 'README.txt'
 
@@ -38,7 +38,7 @@ The dataset includes the following files:
 
 - 'test/y_test.txt': Test labels.
 
-MERGE DATA
+##MERGE DATA
 The script continues, and merges the training and the test sets to create one data set.
 *combine subject data from train and test folders
 *combine "x" data from train and test folders
@@ -46,23 +46,23 @@ The script continues, and merges the training and the test sets to create one da
 *merge the columns of the subject, X and Y data.tables
 The final merge is contained in object "allData"
 
-EXTRACT MEAN AND STD DEVIATION DATA
+##EXTRACT MEAN AND STD DEVIATION DATA
 Extracts only the measurements on the mean and standard deviation for each measurement.
 First searches the :features.txt" file for the feature names containing "mean" or "std".
 Places all mean and std data , along with subject and Y data into object "meanstd"
 
-DESCRIPTIVE ACTIVITY NAMES
+##DESCRIPTIVE ACTIVITY NAMES
 The script adds descriptive activity names to name the activities in the data set
 names are taken from file "activity_labels.txt"
 and merged with the "meanstd" oject.
 
-DESCRIPTIVE VARIABLE NAMES ADDED
+##DESCRIPTIVE VARIABLE NAMES ADDED
 Appropriately labels the data set with descriptive variable names.
 feature names are taken from the fData object (source: "features.txt")
 some data cleaning of labels with the "gsub" function is performed.
 the names are added into the meanstd object cotaining all the data.
 
-TIDY DATA SET
+##TIDY DATA SET
 A second, independent tidy data set with the average  of each variable for each
 activity and each subject are completed.
 The IDs "Subject","ActivityID","Activites" are melted along with the measurement variables
