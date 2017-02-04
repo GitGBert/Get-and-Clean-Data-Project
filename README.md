@@ -8,9 +8,9 @@ You will be required to submit:
 4) You should also include a README.md in the repo with your scripts. This repo
    explains how all of the scripts work and how they are connected.
    
-SCRIPT "run_analysis.R" is explained below:
+##SCRIPT "run_analysis.R" is explained below:
    
-DATA DOWNLOAD
+##DATA DOWNLOAD
    The script first downloads the data (zipped) from the link below
    "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
    It then unzips the file in the working directory. Subfolders are created.
