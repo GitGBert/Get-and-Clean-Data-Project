@@ -15,34 +15,35 @@ DATA DOWNLOAD
    "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
    It then unzips the file in the working directory. Subfolders are created.
    
-# The dataset includes the following files:
-#         
-# - 'README.txt'
-# 
-# - 'features_info.txt': Shows information about the variables used on the feature vector.
-# 
-# - 'features.txt': List of all features.
-# 
-# - 'activity_labels.txt': Links the class labels with their activity name.
-#
-# - 'train/subject_train.txt'
-# 
-# - 'train/X_train.txt': Training set.
-# 
-# - 'train/y_train.txt': Training labels.
-#
-# - 'test/subject_train.txt'
-# 
-# - 'test/X_test.txt': Test set.
-# 
-# - 'test/y_test.txt': Test labels.
+The dataset includes the following files:
+=========================================
+
+- 'README.txt'
+
+- 'features_info.txt': Shows information about the variables used on the feature vector.
+
+- 'features.txt': List of all features.
+
+- 'activity_labels.txt': Links the class labels with their activity name.
+
+- 'train/subject_train.txt'
+
+- 'train/X_train.txt': Training set.
+
+- 'train/y_train.txt': Training labels.
+
+- 'test/subject_train.txt'
+
+- 'test/X_test.txt': Test set.
+
+- 'test/y_test.txt': Test labels.
 
 MERGE DATA
 The script continues, and merges the training and the test sets to create one data set.
-# combine subject data from train and test folders
-# combine "x" data from train and test folders
-# combine "y" data from train and test folders
-# merge the columns of the subject, X and Y data.tables
+*combine subject data from train and test folders
+*combine "x" data from train and test folders
+*combine "y" data from train and test folders
+*merge the columns of the subject, X and Y data.tables
 The final merge is contained in object "allData"
 
 EXTRACT MEAN AND STD DEVIATION DATA
